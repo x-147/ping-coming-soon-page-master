@@ -17,6 +17,10 @@ body {
   /* takes full height of viewport so items can grow */
   /* at least 100vh, to avoid clipping */
   min-height: 100vh;
+
+  /* so that content is not clipped */
+  /* with viewport reduction on horizontal axis */
+  min-width: 600px;
 }
 
 .main-container {
@@ -28,8 +32,6 @@ body {
   grid-template-rows: 100px 100px 100px 400px 100px 100px;
   /* and column is setting the grid width */
   grid-template-columns: 600px;
-
-  /* take full height of parent element so its children can grow */
 }
 
 /* TOP LOGO */
