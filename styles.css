@@ -4,6 +4,83 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 20px;
+}
+
 body {
   font-family: 'Libre Franklin', sans-serif;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  /* takes full height of viewport so items can grow */
+  /* at least 100vh, to avoid clipping */
+  min-height: 100vh;
+}
+
+.main-container {
+  display: grid;
+  /* row is setting the grid height */
+  grid-template-rows: 85px 85px 1fr 500px;
+  /* and column is setting the grid width */
+  grid-template-columns: 600px;
+
+  /* take full height of parent element so its children can grow */
+}
+
+/* i alwyas forget xD */
+/* logo is flex container, img is flex item  */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading-and-subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading-and-subscribe .heading {
+  font-size: 2rem;
+}
+
+.heading-and-subscribe .heading span:first-of-type {
+  font-weight: 300;
+  opacity: 0.4;
+}
+
+.heading-and-subscribe .heading span:last-of-type {
+  font-weight: 700;
+}
+
+.heading-and-subscribe .subscribe {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+/* IMAGES */
+
+.logo > img {
+  height: 50px;
+  width: 70px;
+
+  object-fit: contain;
+}
+
+.dashboard-image > img {
+  height: 500px;
+  width: 500px;
+
+  object-fit: contain;
+}
+
+.socials img {
+  height: 40px;
+  width: 40px;
+
+  /* not needed */
+  object-fit: contain;
 }
