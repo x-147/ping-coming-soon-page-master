@@ -123,7 +123,7 @@ input::placeholder {
 }
 
 button[type='submit'] {
-  height: 45px;
+  height: 50px;
   width: 188px;
   border-radius: 45px;
 
@@ -196,4 +196,174 @@ button[type='submit']:hover {
   line-height: 100px;
 
   opacity: 0.3;
+}
+
+@media (max-width: 375px) {
+  .main-container {
+    /* shift everything down a bit */
+    margin-top: 50px;
+
+    display: grid;
+    /* row is setting the grid height */
+    grid-template-rows: 100px 100px 100px 400px 100px 100px;
+    /* and column is setting the grid width */
+    grid-template-columns: 600px;
+
+    /* mobile config */
+    grid-template-rows: 70px 150px 150px 400px 100px 100px;
+    grid-template-columns: 375px;
+  }
+
+  /* TOP LOGO */
+
+  /* i alwyas forget xD */
+  /* logo is flex container, img is flex item  */
+  .logo {
+    display: flex;
+    justify-content: center;
+
+    /* mobile config */
+    align-items: end;
+  }
+
+  .logo > img {
+    height: 50px;
+    object-fit: contain;
+    /* mobile config */
+    width: 60px;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+
+    /* mobile config */
+    justify-content: center;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  input[type='email'] {
+    height: 50px;
+    width: 402px;
+    border-radius: 45px;
+
+    border: 2px solid hsl(223, 100%, 95%);
+    outline: none;
+
+    /* text indenting left and right */
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    font-size: 0.8rem;
+
+    /* mobile config */
+    width: 375px;
+  }
+
+  .input-container {
+    position: relative;
+  }
+
+  .error-text {
+    visibility: hidden;
+
+    position: absolute;
+    top: 54px; /* add some offset to input box height */
+    left: 1rem; /* same as padding left value */
+
+    opacity: 0.5;
+    font-size: 0.55rem;
+    font-style: italic;
+    color: hsl(354, 100%, 66%);
+
+    /* mobile config */
+    display: none;
+    visibility: visible;
+    position: static;
+    text-align: center;
+    margin-top: 6px;
+  }
+
+  button[type='submit'] {
+    height: 50px;
+    width: 188px;
+    border-radius: 45px;
+
+    border: 1px solid hsl(223, 87%, 63%);
+    outline: none;
+
+    background-color: hsl(223, 87%, 63%);
+    color: white;
+
+    font-family: inherit;
+    font-weight: 500;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+    /* without this, lower half of the button becomes unclickable */
+    position: relative;
+
+    /* mobile config */
+    width: 375px;
+  }
+
+  /* HEADING */
+
+  .heading-and-subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* mobile config */
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .heading-and-subscribe .heading {
+    /* mobile config */
+    font-size: 1.6rem;
+  }
+
+  .heading-and-subscribe .heading span:first-of-type {
+    font-weight: 300;
+    opacity: 0.4;
+  }
+
+  .heading-and-subscribe .heading span:last-of-type {
+    font-weight: 700;
+  }
+
+  .heading-and-subscribe .subscribe {
+    font-weight: 300;
+
+    /* mobile config */
+    font-size: 0.7rem;
+  }
+
+  /* DASHBOARD */
+
+  .dashboard-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dashboard-image > img {
+    /* mobile config */
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  /* SOCIALS */
+  .socials {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 20px;
+
+    /* mobile config */
+    gap: 10px;
+  }
 }

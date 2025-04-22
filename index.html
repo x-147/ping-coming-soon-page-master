@@ -96,15 +96,14 @@
         const isValid = validator.isEmail(event.target['email-address'].value);
 
         if (!isValid) {
-          console.log('is valid', isValid);
-          errorText.style.visibility = 'visible';
+          errorText.style.display = 'block';
           inputElement.style.outline = '0.09rem solid hsl(354, 100%, 87%)';
           inputElement.style.border = 'none';
         }
       });
 
       inputElement.addEventListener('click', (event) => {
-        errorText.style.visibility = 'hidden';
+        errorText.style.display = 'none';
 
         // reset outline and border
         inputElement.style.outline = '';
