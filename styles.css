@@ -272,4 +272,13 @@ i {
   button[type='submit']:hover {
     opacity: 1;
   }
+
+  /* no concept of hover in mobile */
+  .circle:hover i {
+    color: hsl(223, 87%, 63%);
+  }
+
+  .circle:hover {
+    background-color: white;
+  }
 }
