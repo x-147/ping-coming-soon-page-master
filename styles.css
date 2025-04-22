@@ -20,14 +20,19 @@ body {
 }
 
 .main-container {
+  /* shift everything down a bit */
+  margin-top: 60px;
+
   display: grid;
   /* row is setting the grid height */
-  grid-template-rows: 85px 85px 1fr 500px;
+  grid-template-rows: 100px 100px 100px 500px;
   /* and column is setting the grid width */
   grid-template-columns: 600px;
 
   /* take full height of parent element so its children can grow */
 }
+
+/* TOP LOGO */
 
 /* i alwyas forget xD */
 /* logo is flex container, img is flex item  */
@@ -37,11 +42,13 @@ body {
   align-items: center;
 }
 
+/* HEADING */
+
 .heading-and-subscribe {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .heading-and-subscribe .heading {
@@ -61,11 +68,41 @@ body {
   font-size: 0.9rem;
   font-weight: 300;
 }
+
+/* EMAIL INPUT BOX and BUTTON */
+
+.email-address-and-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input[type='email'] {
+  height: 50px;
+  width: 402px;
+  border-radius: 45px;
+
+  border: 1px solid gray;
+  outline: none;
+
+  text-indent: 1rem;
+  font-size: 0.8rem;
+}
+
+button[type='submit'] {
+  height: 45px;
+  width: 188px;
+  border-radius: 45px;
+
+  border: 1px solid gray;
+  outline: none;
+}
+
 /* IMAGES */
 
 .logo > img {
   height: 50px;
-  width: 70px;
+  width: 80px;
 
   object-fit: contain;
 }
