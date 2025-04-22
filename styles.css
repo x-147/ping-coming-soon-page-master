@@ -170,6 +170,18 @@ button[type='submit']:hover {
   gap: 20px;
 }
 
+i {
+  color: hsl(223, 87%, 63%);
+}
+
+.circle:hover i {
+  color: white;
+}
+
+.circle:hover {
+  background-color: hsl(223, 87%, 63%);
+}
+
 .circle {
   height: 40px;
   width: 40px;
@@ -180,9 +192,7 @@ button[type='submit']:hover {
   position: relative;
 }
 
-.circle .facebook,
-.circle .twitter,
-.circle .instagram {
+.circle i {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -197,6 +207,8 @@ button[type='submit']:hover {
 
   opacity: 0.3;
 }
+
+/* media queries */
 
 @media (max-width: 500px) {
   .main-container {
