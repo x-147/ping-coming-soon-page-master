@@ -76,9 +76,9 @@ body {
   font-weight: 300;
 }
 
-/* EMAIL INPUT BOX and BUTTON */
+/* FORM, EMAIL INPUT BOX and BUTTON */
 
-.email-address-and-button {
+form {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -109,12 +109,15 @@ input::placeholder {
 
 .error-text {
   visibility: hidden;
+
   position: absolute;
-  font-size: 0.5rem;
-  color: hsl(354, 100%, 66%);
   top: 54px; /* add some offset to input box height */
   left: 1rem; /* same as padding left value */
+
+  opacity: 0.5;
+  font-size: 0.55rem;
   font-style: italic;
+  color: hsl(354, 100%, 66%);
 }
 
 button[type='submit'] {
@@ -132,6 +135,14 @@ button[type='submit'] {
   font-weight: 500;
 
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+  /* without this, lower half of the button becomes unclickable */
+  position: relative;
+}
+
+button[type='submit']:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
 
 /* DASHBOARD */

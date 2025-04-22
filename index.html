@@ -28,6 +28,12 @@
       referrerpolicy="no-referrer"
     />
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/validator@13.15.0/validator.min.js"
+      integrity="sha256-jMd1rzzIbtNfa7snYgSscu+0czTwUOoQowqWI+faIOc="
+      crossorigin="anonymous"
+    ></script>
+
     <title>Frontend Mentor | Ping coming soon page</title>
   </head>
   <body>
@@ -39,18 +45,18 @@
         </div>
         <div class="subscribe">Subscribe and get notified</div>
       </div>
-      <div class="email-address-and-button">
+      <form action="/submit-form" method="post" novalidate>
         <div class="input-container">
           <input
             type="email"
-            name="email"
+            name="email-address"
             placeholder="Your email address..."
           />
           <div class="error-text">Please provide a valid email address</div>
         </div>
-
         <button type="submit">Notify Me</button>
-      </div>
+      </form>
+
       <div class="dashboard-image">
         <img src="./images/illustration-dashboard.png" alt="dashboard" />
       </div>
@@ -79,5 +85,31 @@
       </div>
       <div class="copyright">&copy; Copyright Ping. All rights reserved.</div>
     </div>
+    <script>
+      const formElement = document.querySelector('form');
+      const inputElement = document.querySelector("input[type='email']");
+      const errorText = document.querySelector('.error-text');
+
+      formElement.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const isValid = validator.isEmail(event.target['email-address'].value);
+
+        if (!isValid) {
+          console.log('is valid', isValid);
+          errorText.style.visibility = 'visible';
+          inputElement.style.outline = '0.09rem solid hsl(354, 100%, 87%)';
+          inputElement.style.border = 'none';
+        }
+      });
+
+      inputElement.addEventListener('click', (event) => {
+        errorText.style.visibility = 'hidden';
+
+        // reset outline and border
+        inputElement.style.outline = '';
+        inputElement.style.border = '';
+      });
+    </script>
   </body>
 </html>
