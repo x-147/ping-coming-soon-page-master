@@ -110,7 +110,7 @@ input::placeholder {
 }
 
 .error-text {
-  visibility: hidden;
+  display: none;
 
   position: absolute;
   top: 54px; /* add some offset to input box height */
