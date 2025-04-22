@@ -256,4 +256,8 @@ button[type='submit']:hover {
   .socials {
     gap: 10px;
   }
+
+  button[type='submit']:hover {
+    opacity: 1;
+  }
 }
