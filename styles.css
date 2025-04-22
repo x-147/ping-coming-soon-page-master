@@ -21,11 +21,11 @@ body {
 
 .main-container {
   /* shift everything down a bit */
-  margin-top: 60px;
+  margin-top: 50px;
 
   display: grid;
   /* row is setting the grid height */
-  grid-template-rows: 100px 100px 100px 500px;
+  grid-template-rows: 100px 100px 100px 400px 100px 100px;
   /* and column is setting the grid width */
   grid-template-columns: 600px;
 
@@ -98,6 +98,48 @@ button[type='submit'] {
   outline: none;
 }
 
+/* DASHBOARD */
+
+.dashboard-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SOCIALS */
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+
+  border: 1px solid hsl(223, 100%, 95%);
+
+  position: relative;
+}
+
+.circle .facebook,
+.circle .twitter,
+.circle .instagram {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* COPYRIGHT */
+.copyright {
+  text-align: center;
+  font-size: 0.5rem;
+  line-height: 100px;
+}
+
 /* IMAGES */
 
 .logo > img {
@@ -109,15 +151,7 @@ button[type='submit'] {
 
 .dashboard-image > img {
   height: 500px;
-  width: 500px;
+  width: 600px;
 
-  object-fit: contain;
-}
-
-.socials img {
-  height: 40px;
-  width: 40px;
-
-  /* not needed */
   object-fit: contain;
 }
