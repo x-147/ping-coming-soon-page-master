@@ -103,6 +103,20 @@ input::placeholder {
   color: hsl(223, 100%, 95%);
 }
 
+.input-container {
+  position: relative;
+}
+
+.error-text {
+  visibility: hidden;
+  position: absolute;
+  font-size: 0.5rem;
+  color: hsl(354, 100%, 66%);
+  top: 54px; /* add some offset to input box height */
+  left: 1rem; /* same as padding left value */
+  font-style: italic;
+}
+
 button[type='submit'] {
   height: 45px;
   width: 188px;
@@ -115,6 +129,9 @@ button[type='submit'] {
   color: white;
 
   font-family: inherit;
+  font-weight: 500;
+
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* DASHBOARD */
