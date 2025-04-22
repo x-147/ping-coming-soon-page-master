@@ -198,7 +198,7 @@ button[type='submit']:hover {
   opacity: 0.3;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 500px) {
   .main-container {
     /* shift everything down a bit */
     margin-top: 50px;
